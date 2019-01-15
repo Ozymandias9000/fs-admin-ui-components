@@ -1,6 +1,10 @@
 import React, { Component } from "react";
-
-import { Thumbnail, Well } from "fs-admin-ui-components";
+import {
+  Thumbnail,
+  Well,
+  PaginationButton,
+  TabNav
+} from "fs-admin-ui-components";
 
 export default class App extends Component {
   render() {
@@ -11,8 +15,14 @@ export default class App extends Component {
           alt="hi"
         />
         <Well>
-          <p>Hello!</p>
+          <p>Hello there !</p>
         </Well>
+        <PaginationButton next />
+        <TabNav>
+          <div label="Profile">Hi there</div>
+          <div label="Home">Hi there</div>
+          <div label="Messages">Hi there</div>
+        </TabNav>
       </div>
     );
   }

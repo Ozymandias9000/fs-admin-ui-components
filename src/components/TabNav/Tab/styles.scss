@@ -1,0 +1,28 @@
+.listItem {
+  cursor: pointer;
+  margin-top: 0;
+  margin-right: 2px;
+  line-height: 1.5;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  &:hover {
+    color: #23527c;
+    background-color: #eee;
+    border-color: #eee #eee #ddd;
+  }
+}
+
+.listItemActive,
+.listItemActive:hover {
+  composes: listItem;
+  cursor: default;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+  color: inherit;
+  background: inherit;
+}
