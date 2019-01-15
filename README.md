@@ -18,17 +18,24 @@ npm i -S fs-admin-ui-components
 
 ## Usage
 
+From [create-react-package](https://github.com/transitive-bullshit/create-react-library#readme) docs:
+
+> Local development is broken into two parts (ideally using two tabs).
+> First, run rollup to watch your src/ module and automatically recompile it into dist/ whenever you make changes.
+
 ```jsx
-import React, { Component } from "react";
-
-import MyComponent from "fs-admin-ui-components";
-
-class Example extends Component {
-  render() {
-    return <MyComponent />;
-  }
-}
+npm start # runs rollup with watch flag
 ```
+
+> The second part will be running the example/ create-react-app that's linked to the local version of your module.
+
+```jsx
+# (in another tab)
+cd example
+npm start # runs create-react-app dev server
+```
+
+> Now, anytime you make a change to your library in src/ or to the example app's example/src, create-react-app will live-reload your local dev server so you can iterate on your component in real-time.
 
 ## Components
 
@@ -51,11 +58,13 @@ class Example extends Component {
 #### TabNav
 
 ```jsx
+import { TabNav } from "fs-admin-ui-components";
+
 <TabNav>
   <div label="Home" />
   <div label="Profile" />
   <div label="Messages" />
-</TabNav>
+</TabNav>;
 ```
 
 ### Buttons
@@ -63,18 +72,22 @@ class Example extends Component {
 ### Thumbnails
 
 ```jsx
+import { Thumbnail } from "fs-admin-ui-components";
+
 <Thumbnail
   image="https://source.unsplash.com/random/300x300?abstract"
   alt="Random abstract art"
-/>
+/>;
 ```
 
 ### Wells
 
 ```jsx
+import { Well } from "fs-admin-ui-components";
+
 <Well>
   <p>Hello there!</p>
-</Well>
+</Well>;
 ```
 
 ### Forms
