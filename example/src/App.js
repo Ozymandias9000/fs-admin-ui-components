@@ -5,7 +5,8 @@ import {
   PaginationButton,
   Button,
   TabNav,
-  Dropdown
+  Dropdown,
+  Alert
 } from "fs-admin-ui-components";
 
 export default class App extends Component {
@@ -28,6 +29,11 @@ export default class App extends Component {
         <PaginationButton prev>Prev</PaginationButton>
         <PaginationButton next>Next</PaginationButton>
         <Button onClick={() => alert("Hi!")}>Click me!</Button>
+        <Alert primary>Primary alert</Alert>
+        <Alert secondary>Secondary alert</Alert>
+        <Alert success>Success alert</Alert>
+        <Alert warning>Warning alert</Alert>
+        <Alert danger>Danger alert</Alert>
         <TabNav>
           <div label="Home" />
           <div label="Profile" />

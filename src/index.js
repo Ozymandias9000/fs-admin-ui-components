@@ -4,7 +4,8 @@ import PaginationButton from './components/PaginationButton'
 import TabNav from './components/TabNav'
 import Button from './components/Button'
 import Dropdown from './components/Dropdown'
+import Alert from './components/Alert'
 
 import './styles.scss'
 
-export { Thumbnail, Well, PaginationButton, Button, TabNav, Dropdown }
+export { Thumbnail, Well, PaginationButton, Button, TabNav, Dropdown, Alert }

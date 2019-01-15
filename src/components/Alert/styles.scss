@@ -1,0 +1,37 @@
+.alert {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin: 1rem 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  line-height: 1.5;
+}
+
+.primary {
+  background-color: #cce5ff;
+  border-color: #b8daff;
+}
+
+.secondary {
+  background-color: #e2e3e5;
+  border-color: #b8daff;
+}
+
+.success {
+  background-color: #d3ecd9;
+  border-color: #b8daff;
+}
+
+.warning {
+  background-color: #fff3cd;
+  border-color: #b8daff;
+}
+
+.danger {
+  background-color: #f8d7da;
+  border-color: #b8daff;
+}
+
+.fade {
+  transition: opacity 0.15s linear;
+}
