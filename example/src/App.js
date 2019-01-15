@@ -19,9 +19,9 @@ export default class App extends Component {
         </Well>
         <PaginationButton next />
         <TabNav>
-          <div label="Profile">Hi there</div>
-          <div label="Home">Hi there</div>
-          <div label="Messages">Hi there</div>
+          <div label="Home" />
+          <div label="Profile" />
+          <div label="Messages" />
         </TabNav>
       </div>
     );
