@@ -1,22 +1,5 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import Thumbnail from './components/Thumbnail'
+import Well from './components/Well'
+import './styles.scss'
 
-import styles from './styles.css'
-
-export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string
-  }
-
-  render() {
-    const {
-      text
-    } = this.props
-
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
-}
+export { Thumbnail, Well }

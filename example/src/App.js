@@ -1,13 +1,19 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import ExampleComponent from 'fs-admin-ui-components'
+import { Thumbnail, Well } from "fs-admin-ui-components";
 
 export default class App extends Component {
-  render () {
+  render() {
     return (
       <div>
-        <ExampleComponent text='Modern React component module' />
+        <Thumbnail
+          image="https://source.unsplash.com/random/300x300?abstract"
+          alt="hi"
+        />
+        <Well>
+          <p>Hello!</p>
+        </Well>
       </div>
-    )
+    );
   }
 }
