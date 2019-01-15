@@ -1,7 +1,6 @@
 .listItem {
   cursor: pointer;
-  margin-top: 0;
-  margin-right: 2px;
+  margin: 0 2px -1px 0;
   line-height: 1.5;
   border: 1px solid transparent;
   border-radius: 4px 4px 0 0;
@@ -16,13 +15,16 @@
   }
 }
 
+.listItemActive {
+  composes: listItem;
+}
+
 .listItemActive,
 .listItemActive:hover {
-  composes: listItem;
   cursor: default;
   background-color: #fff;
   border: 1px solid #ddd;
-  border-bottom-color: transparent;
+  border-bottom-color: white;
   color: inherit;
   background: inherit;
 }

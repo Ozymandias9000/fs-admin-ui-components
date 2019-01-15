@@ -2,8 +2,8 @@ import React from 'react'
 
 import styles from './styles.scss'
 
-const PaginationButton = props => {
-  const { next, prev, children, className, ...rest } = props
+const Button = props => {
+  const { children, className, ...rest } = props
   return (
     <button
       className={
@@ -11,9 +11,9 @@ const PaginationButton = props => {
       }
       {...rest}
     >
-      {prev ? '<-' : ''} {children} {next ? '->' : ''}
+      {children}
     </button>
   )
 }
 
-export default PaginationButton
+export default Button
