@@ -6,7 +6,7 @@
 
 ## Table of Contents
 
-- [Usage](#usage)
+- [Development](#development)
 - [Components](#components)
 - [License](#license)
 
@@ -16,7 +16,7 @@
 npm i -S fs-admin-ui-components
 ```
 
-## Usage
+## Development
 
 From [create-react-package](https://github.com/transitive-bullshit/create-react-library#readme) docs:
 
@@ -67,12 +67,12 @@ npm start # runs create-react-app dev server
 #### TabNav
 
 ```jsx
-import { TabNav } from "fs-admin-ui-components";
+import { TabNav } from "fs-admin-ui-components"
 <TabNav>
   <div label="Home" />
   <div label="Profile" />
   <div label="Messages" />
-</TabNav>;
+</TabNav>
 ```
 
 ### Buttons
@@ -80,45 +80,76 @@ import { TabNav } from "fs-admin-ui-components";
 #### Generic Button
 
 ```jsx
-import { Button } from "fs-admin-ui-components";
-<Button onClick={() => alert("Hi!")}>Click me!</Button>;
+import { Button } from "fs-admin-ui-components"
+<Button onClick={() => alert("Hi!")}>Click me!</Button>
 ```
 
 #### Dropdowns
 
 ```jsx
-import { Dropdown } from "fs-admin-ui-components";
+import { Dropdown } from "fs-admin-ui-components"
 <Dropdown>
   <div option="blue">Blue</div>
   <div option="red">Red</div>
   <div option="green">Green</div>
-</Dropdown>;
+</Dropdown>
+```
+
+#### Using [React-Select](https://github.com/JedWatson/react-select) Dropdown
+
+```jsx
+import { Select } from "react-select
+ 
+<Select
+  options={[
+    { value: "chocolate", label: "Chocolate" },
+    { value: "strawberry", label: "Strawberry" },
+    { value: "vanilla", label: "Vanilla" }
+  ]}
+/>
 ```
 
 ### Thumbnails
 
 ```jsx
-import { Thumbnail } from "fs-admin-ui-components";
+import { Thumbnail } from "fs-admin-ui-components"
 <Thumbnail
   image="https://source.unsplash.com/random/300x300?abstract"
   alt="Random abstract art"
-/>;
+/>
 ```
 
 ### Wells
 
 ```jsx
-import { Well } from "fs-admin-ui-components";
+import { Well } from "fs-admin-ui-components"
 <Well>
   <p>Hello there!</p>
-</Well>;
+</Well>
 ```
 
 ### Forms
 
 ### Pagination
 
+```jsx
+import { PageNav } from "fs-admin-ui-components"
+<PageNav>
+  <div label="1" />
+  <div label="2" />
+  <div label="3" />
+</PageNav>
+```
+
 ### Alerts
+
+```jsx
+<Alert primary="true">Primary alert</Alert>
+<Alert secondary="true">Secondary alert</Alert>
+<Alert success="true">Success alert</Alert>
+<Alert warning="true">Warning alert</Alert>
+<Alert danger="true">Danger alert</Alert>
+``` 
 
 ## License
 

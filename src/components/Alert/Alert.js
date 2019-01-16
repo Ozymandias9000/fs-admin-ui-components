@@ -3,6 +3,10 @@ import classNames from 'classnames'
 
 import styles from './styles.scss'
 
+// TODO
+// Decide between coding our own alerts
+// or using react-toastify
+
 const Alert = props => {
   const { children, ...rest } = props
 
@@ -12,7 +16,6 @@ const Alert = props => {
     [styles.success]: props.success,
     [styles.warning]: props.warning,
     [styles.danger]: props.danger
-    // [styles.fade]:
   })
 
   return (

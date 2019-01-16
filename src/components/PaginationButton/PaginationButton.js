@@ -11,7 +11,7 @@ const PaginationButton = props => {
       }
       {...rest}
     >
-      {prev ? '<-' : ''} {children} {next ? '->' : ''}
+      {prev ? 'Previous' : ''} {children} {next ? 'Next' : ''}
     </button>
   )
 }

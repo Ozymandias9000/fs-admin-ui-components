@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
+import Select from "react-select";
 import {
   Thumbnail,
   Well,
@@ -6,13 +9,17 @@ import {
   Button,
   TabNav,
   Dropdown,
-  Alert
+  Alert,
+  PageNav
 } from "fs-admin-ui-components";
 
 export default class App extends Component {
+  notify = () => toast.success("Wow so easy !");
+
   render() {
     return (
       <main>
+        <ToastContainer />
         <Thumbnail
           image="https://source.unsplash.com/random/300x300?abstract"
           alt="hi"
@@ -26,24 +33,47 @@ export default class App extends Component {
         <Well>
           <p>Hello there !</p>
         </Well>
-        <PaginationButton prev>Prev</PaginationButton>
-        <PaginationButton next>Next</PaginationButton>
-        <Button onClick={() => alert("Hi!")}>Click me!</Button>
-        <Alert primary>Primary alert</Alert>
-        <Alert secondary>Secondary alert</Alert>
-        <Alert success>Success alert</Alert>
-        <Alert warning>Warning alert</Alert>
-        <Alert danger>Danger alert</Alert>
+        <div className="buttonContainer">
+          <PaginationButton prev />
+          <PaginationButton next />
+          <Button onClick={this.notify}>Click for toast!</Button>
+        </div>
+        <Alert primary="true">Primary alert</Alert>
+        <Alert secondary="true">Secondary alert</Alert>
+        <Alert success="true">Success alert</Alert>
+        <Alert warning="true">Warning alert</Alert>
+        <Alert danger="true">Danger alert</Alert>
         <TabNav>
           <div label="Home" />
           <div label="Profile" />
           <div label="Messages" />
         </TabNav>
+        <PageNav>
+          <div label="1" />
+          <div label="2" />
+          <div label="3" />
+        </PageNav>
         <Dropdown>
           <div option="blue">Blue</div>
           <div option="red">Red</div>
           <div option="green">Green</div>
         </Dropdown>
+        <p>
+          <a
+            href="https://github.com/JedWatson/react-select"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            React-Select Dropdown
+          </a>
+        </p>
+        <Select
+          options={[
+            { value: "chocolate", label: "Chocolate" },
+            { value: "strawberry", label: "Strawberry" },
+            { value: "vanilla", label: "Vanilla" }
+          ]}
+        />
       </main>
     );
   }
