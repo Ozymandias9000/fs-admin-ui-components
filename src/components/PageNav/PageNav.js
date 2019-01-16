@@ -11,6 +11,7 @@ class PageNav extends Component {
   state = {
     pageCount: 0,
     activePage: 0,
+    howManyToDisplay,
     loading: true
   }
 
@@ -40,7 +41,7 @@ class PageNav extends Component {
       / 1) mapping function needs to adapt for pageCount
       / 2) consider nesting link inside PaginationButton
       / 3) disable previous/next if no previous/next
-      /
+      / 4) constrain number of pages shown
       */}
 
         {children &&

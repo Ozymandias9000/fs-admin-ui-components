@@ -10,7 +10,9 @@ import {
   TabNav,
   Dropdown,
   Alert,
-  PageNav
+  PageNav,
+  Card,
+  ButtonGroup
 } from "fs-admin-ui-components";
 
 export default class App extends Component {
@@ -30,9 +32,33 @@ export default class App extends Component {
         <h4>h4 Heading</h4>
         <h5>h5 Heading</h5>
         <h6>h6 Heading</h6>
+
+        <form>
+          <label htmlFor="text">Name</label>
+          <input type="text" name="text" required />
+          <label htmlFor="email">Email</label>
+          <input type="email" name="email" required />
+          <label htmlFor="password">Password</label>
+          <input type="password" name="password" required />
+          <input type="submit" />
+        </form>
+
+        <Card>
+          <p>Let us go now, you and I...</p>
+        </Card>
+
         <Well>
           <p>Hello there !</p>
         </Well>
+
+        <ButtonGroup>
+          <Button>Me</Button>
+          <Button>You</Button>
+          <Button>Everyone</Button>
+          <Button>Everyone</Button>
+          <Button>Everyone</Button>
+        </ButtonGroup>
+
         <div className="buttonContainer">
           <PaginationButton prev />
           <PaginationButton next />
@@ -49,9 +75,9 @@ export default class App extends Component {
           <div label="Messages" />
         </TabNav>
         <PageNav>
-          <div label="1" />
-          <div label="2" />
-          <div label="3" />
+          <button label="1" />
+          <button label="2" />
+          <button label="3" />
         </PageNav>
         <Dropdown>
           <div option="blue">Blue</div>

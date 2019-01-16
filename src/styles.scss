@@ -21,5 +21,18 @@ h6 {
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
+  letter-spacing: 1px;
   color: inherit;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+input {
+  background-image: none !important;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  box-shadow: none;
 }

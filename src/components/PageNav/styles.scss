@@ -12,13 +12,15 @@
     border-bottom: none;
     list-style: none;
     flex: 1;
-    border-radius: 0;
     &:focus,
     &:active,
     &:hover {
       outline: 0;
       background: rgba(0, 0, 0, 0.05);
     }
+  }
+  & button:not(:first-child):not(:last-child) {
+    border-radius: 0;
   }
   & button:first-of-type,
   & button:last-of-type {

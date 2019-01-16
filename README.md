@@ -128,6 +128,13 @@ import { Well } from "fs-admin-ui-components"
 </Well>
 ```
 
+```jsx
+import { Card } from "fs-admin-ui-components"
+<Card>
+  <p>Let us go now, you and I...</p>
+</Card>
+```
+
 ### Forms
 
 ### Pagination

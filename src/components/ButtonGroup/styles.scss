@@ -1,0 +1,11 @@
+.buttonGroup {
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+  & button {
+    background: #fff;
+    height: 100%;
+  }
+}
