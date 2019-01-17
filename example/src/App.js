@@ -74,11 +74,20 @@ export default class App extends Component {
           <div label="Profile" />
           <div label="Messages" />
         </TabNav>
-        <PageNav>
-          <button label="1" />
-          <button label="2" />
-          <button label="3" />
-        </PageNav>
+        <p>
+          <a
+            href="https://www.npmjs.com/package/react-js-pagination"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            React-JS-Pagination
+          </a>
+        </p>
+        <PageNav
+          itemsCountPerPage={10}
+          totalItemsCount={450}
+          pageRangeDisplayed={5}
+        />
         <Dropdown>
           <div option="blue">Blue</div>
           <div option="red">Red</div>

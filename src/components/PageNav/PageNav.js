@@ -1,69 +1,55 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
-import PaginationButton from '../PaginationButton'
+import Pagination from 'react-js-pagination'
 import styles from './styles.scss'
 
 class PageNav extends Component {
-  static propTypes = {
-    children: PropTypes.instanceOf(Array)
-  }
-
   state = {
-    pageCount: 0,
-    activePage: 0,
-    howManyToDisplay,
-    loading: true
+    activePage: 0
   }
 
-  handleClick = e => {
-    // TODO
-    // Link to new page
-  }
-
-  componentDidMount() {
-    // TODO if page count is not known, query
-    // & adjust accordingly
-  }
+  handlePageChange = pageNum => this.setState({ activePage: pageNum })
 
   render() {
     const {
-      handleClick,
-      props: { children, ...rest },
-      state: { pageCount }
+      props: {
+        itemsCountPerPage,
+        totalItemsCount,
+        pageRangeDisplayed,
+        className,
+        ...rest
+      },
+      state: { activePage },
+      handlePageChange
     } = this
 
     return (
-      <nav className={styles.pageNav} {...rest}>
-        <PaginationButton>Previous</PaginationButton>
-
-        {/* TODO
-      /
-      / 1) mapping function needs to adapt for pageCount
-      / 2) consider nesting link inside PaginationButton
-      / 3) disable previous/next if no previous/next
-      / 4) constrain number of pages shown
-      */}
-
-        {children &&
-          children.map(child => {
-            const { label } = child.props
-
-            return (
-              <PaginationButton
-                className={styles.pageNum}
-                key={label}
-                label={label}
-                onClick={handleClick}
-              >
-                {label}
-              </PaginationButton>
-            )
-          })}
-
-        <PaginationButton>Next</PaginationButton>
+      <nav
+        className={
+          className ? `${styles.pageNav} ${className}` : `${styles.pageNav}`
+        }
+      >
+        <Pagination
+          activePage={activePage}
+          itemsCountPerPage={itemsCountPerPage}
+          totalItemsCount={totalItemsCount}
+          pageRangeDisplayed={pageRangeDisplayed}
+          onChange={handlePageChange}
+          activeLinkClass={styles.activeLink}
+          disabledClass={styles.disabled}
+          innerClass={styles.pagination}
+          {...rest}
+        />
       </nav>
     )
   }
+}
+
+PageNav.propTypes = {
+  itemsCountPerPage: PropTypes.number.isRequired,
+  totalItemsCount: PropTypes.number.isRequired,
+  pageRangeDisplayed: PropTypes.number.isRequired,
+  className: PropTypes.string
 }
 
 export default PageNav

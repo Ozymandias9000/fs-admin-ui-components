@@ -68,6 +68,7 @@ npm start # runs create-react-app dev server
 
 ```jsx
 import { TabNav } from "fs-admin-ui-components"
+
 <TabNav>
   <div label="Home" />
   <div label="Profile" />
@@ -81,6 +82,7 @@ import { TabNav } from "fs-admin-ui-components"
 
 ```jsx
 import { Button } from "fs-admin-ui-components"
+
 <Button onClick={() => alert("Hi!")}>Click me!</Button>
 ```
 
@@ -88,6 +90,7 @@ import { Button } from "fs-admin-ui-components"
 
 ```jsx
 import { Dropdown } from "fs-admin-ui-components"
+
 <Dropdown>
   <div option="blue">Blue</div>
   <div option="red">Red</div>
@@ -99,7 +102,7 @@ import { Dropdown } from "fs-admin-ui-components"
 
 ```jsx
 import { Select } from "react-select
- 
+
 <Select
   options={[
     { value: "chocolate", label: "Chocolate" },
@@ -113,6 +116,7 @@ import { Select } from "react-select
 
 ```jsx
 import { Thumbnail } from "fs-admin-ui-components"
+
 <Thumbnail
   image="https://source.unsplash.com/random/300x300?abstract"
   alt="Random abstract art"
@@ -123,6 +127,7 @@ import { Thumbnail } from "fs-admin-ui-components"
 
 ```jsx
 import { Well } from "fs-admin-ui-components"
+
 <Well>
   <p>Hello there!</p>
 </Well>
@@ -130,6 +135,7 @@ import { Well } from "fs-admin-ui-components"
 
 ```jsx
 import { Card } from "fs-admin-ui-components"
+
 <Card>
   <p>Let us go now, you and I...</p>
 </Card>
@@ -139,13 +145,16 @@ import { Card } from "fs-admin-ui-components"
 
 ### Pagination
 
+#### Using [React-JS-Pagination](https://www.npmjs.com/package/react-js-pagination)
+
 ```jsx
 import { PageNav } from "fs-admin-ui-components"
-<PageNav>
-  <div label="1" />
-  <div label="2" />
-  <div label="3" />
-</PageNav>
+
+<PageNav
+  itemsCountPerPage={10}
+  totalItemsCount={450}
+  pageRangeDisplayed={5}
+/>
 ```
 
 ### Alerts
