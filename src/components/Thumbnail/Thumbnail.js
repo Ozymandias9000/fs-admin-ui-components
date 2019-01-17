@@ -1,17 +1,26 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
 import styles from './styles.scss'
 
-export default class Thumbnail extends Component {
-  static propTypes = {
-    image: PropTypes.string.isRequired,
-    alt: PropTypes.string.isRequired
-  }
+const Thumbnail = props => {
+  const { image, alt, className, ...rest } = props
 
-  render() {
-    const { image, alt } = this.props
-
-    return <img className={styles.image} src={image} alt={alt} />
-  }
+  return (
+    <img
+      className={
+        className ? `${styles.thumbnail} ${className}` : `${styles.thumbnail}`
+      }
+      src={image}
+      alt={alt}
+      {...rest}
+    />
+  )
 }
+
+Thumbnail.propTypes = {
+  image: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired
+}
+
+export default Thumbnail

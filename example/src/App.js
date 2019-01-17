@@ -69,11 +69,13 @@ export default class App extends Component {
         <Alert success="true">Success alert</Alert>
         <Alert warning="true">Warning alert</Alert>
         <Alert danger="true">Danger alert</Alert>
+
         <TabNav>
           <div label="Home" />
           <div label="Profile" />
           <div label="Messages" />
         </TabNav>
+
         <p>
           <a
             href="https://www.npmjs.com/package/react-js-pagination"
@@ -83,16 +85,19 @@ export default class App extends Component {
             React-JS-Pagination
           </a>
         </p>
+
         <PageNav
           itemsCountPerPage={10}
           totalItemsCount={450}
           pageRangeDisplayed={5}
         />
+
         <Dropdown>
           <div option="blue">Blue</div>
           <div option="red">Red</div>
           <div option="green">Green</div>
         </Dropdown>
+
         <p>
           <a
             href="https://github.com/JedWatson/react-select"
@@ -102,6 +107,7 @@ export default class App extends Component {
             React-Select Dropdown
           </a>
         </p>
+
         <Select
           options={[
             { value: "chocolate", label: "Chocolate" },

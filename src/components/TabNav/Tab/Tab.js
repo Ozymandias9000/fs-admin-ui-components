@@ -1,38 +1,31 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
+
 import styles from './styles.scss'
 
-class Tab extends Component {
-  static propTypes = {
-    activeTab: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired
-  }
+const Tab = props => {
+  const { label, activeTab, onClick } = props
 
-  onClick = () => {
-    const { label, onClick } = this.props
+  const handleClick = () => {
     onClick(label)
   }
 
-  render() {
-    const {
-      onClick,
-      props: { activeTab, label }
-    } = this
+  return (
+    <li
+      className={
+        activeTab === label ? `${styles.listItemActive}` : `${styles.listItem}`
+      }
+      onClick={handleClick}
+    >
+      {label}
+    </li>
+  )
+}
 
-    return (
-      <li
-        className={
-          activeTab === label
-            ? `${styles.listItemActive}`
-            : `${styles.listItem}`
-        }
-        onClick={onClick}
-      >
-        {label}
-      </li>
-    )
-  }
+Tab.propTypes = {
+  activeTab: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired
 }
 
 export default Tab

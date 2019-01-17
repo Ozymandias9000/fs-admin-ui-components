@@ -10,12 +10,6 @@
 - [Components](#components)
 - [License](#license)
 
-## Install
-
-```bash
-npm i -S fs-admin-ui-components
-```
-
 ## Development
 
 From [create-react-package](https://github.com/transitive-bullshit/create-react-library#readme) docs:

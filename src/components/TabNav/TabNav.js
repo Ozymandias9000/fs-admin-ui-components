@@ -4,10 +4,6 @@ import styles from './styles.scss'
 import Tab from './Tab/Tab'
 
 class TabNav extends Component {
-  static propTypes = {
-    children: PropTypes.instanceOf(Array).isRequired
-  }
-
   state = {
     activeTab: this.props.children[0].props.label
   }
@@ -40,6 +36,10 @@ class TabNav extends Component {
       </ul>
     )
   }
+}
+
+TabNav.propTypes = {
+  children: PropTypes.array.isRequired
 }
 
 export default TabNav
